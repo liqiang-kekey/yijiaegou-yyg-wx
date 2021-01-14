@@ -1,0 +1,22 @@
+<view class='list'>
+	<block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+		<view class="list_item">
+			<navigator url='detail?id={{item.id}}'>
+				<view class='img'>
+					<image src="{{item.thumb}}" mode="scaleToFill" />
+				</view>
+				<view class='info'>
+					<view class='title'>{{item.goodsname}}</view>
+					<view class='num spu-count-border'>
+						<text>销量{{item.sales}}</text>
+					</view>
+					<view class='price'>￥{{item.price}}</view>
+					<view class="btn i-class" style="background: linear-gradient(to top, #13bb4e, rgb(113, 214, 148));">
+						<text class="iconfont icon-gouwuche" style="color: #fff;font-size:{{fontsize}}rpx;"></text>
+					</view>
+				</view>
+			</navigator>
+			<view class='clear'></view>
+		</view>
+	</block>
+</view>

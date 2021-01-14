@@ -1,0 +1,84 @@
+<view class='goods-wrapper'>
+
+	<view class="spuInfoImg" style='height:{{imageSize.imageHeight}}px;background: url("/community/images/index-comming-goods-bitmap.png)";background-size: 100% 100%;'>
+
+		<image style="width:100%" src="{{goods.bigImg}}" mode="widthFix" bindload="imageLoad" lazy-load="true" bindtap='previewImg' data-idx="{{index}}"></image>
+	</view>
+
+	<view class="spuInfo" style='z-index: {{fmShow==false?-1:2}}'>
+		<view class="spuPrice">
+			<image class='spuPriceBg' src='{{goods_details_price_bg?goods_details_price_bg:"../../images/shareBottomBg.png"}}'></image>
+			<view class="price">
+				¥<text class="salePrice">{{goods.price}}</text>
+				<text class="storePrice">¥{{goods.productprice}}</text>
+			</view>
+
+		</view>.
+		<view class="spuDetailInfo">
+			<view class="spuName">
+				<text class="red" style="font-size:30rpx;">[套餐] </text>{{goods.goodsname}}
+			</view>
+			<view class="saleNum" wx:if="{{is_hide_details_count!=1}}">
+				<text class="purTit">销量</text>
+				<view class="stock">已售
+					<text class="remaining"> {{goods.sales}} </text>件，仅剩
+					<text class="remaining"> {{goods.total}} </text>件</view>
+			</view>
+		</view>
+		<view class="spuDetailInfo">
+			<view class="spuName">
+				<text class="red" style="font-size:30rpx;">可提货物</text>
+			</view>
+			<view wx:for="{{coin}}" class="saleNum" style="height:110rpx" >
+				<view  bindtap="gogoodsdetai" data-id="{{item.gid}}" style="float: left;height:100rpx;width:100rpx"> 
+					<image style="height:100%;width:100%" src="{{item.goods_imgs}}" ></image>
+				</view>
+				<view style="float:left;margin-left:30rpx"> 
+						<view style="height:33rpx;">{{item.goods_name}}</view>
+						<view style="height:33rpx;"></view>
+						<view class="red" style="font-size:30rpx;height:33rpx;">数量：<text class="red" style="font-size:30rpx;">{{item.num}}{{item.coinunit}}</text> </view>
+				</view>
+			</view>
+		</view>
+		<!-- 详情 -->
+		<view class="spuDetail">
+			<image class="goodsDetailTitleImg" src="{{goods_details_title_bg?goods_details_title_bg:'../../images/goodsDetailTitle.png'}}" mode="widthFix"></image>
+			<view class="warmPrompt">
+				<view class="wxParse">
+					<parser html="{{goods.content}}" />
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!--底部按钮begin-->
+<view class='i-fixed-bottom'>
+	<view class="goods-bottom-bar">
+		<view class="leftBtn">
+			<navigator hoverClass="none" openType="switchTab" url="/community/pages/index/index">
+				<view class="bar-item back-to-index">
+					<image class="icon" src="/community/images/icon-tab-index.png"></image>
+					回首页
+				</view>
+			</navigator>
+		</view>
+		<view class="gobuy">
+	
+			<label class="balanceBtn" >
+				<view bindtap="gobuy" data-id="{{goods.id}}" class="bar-item balance" style='background: {{goodsdetails_buy_bg_color}}'>
+					立即购买
+				</view>
+			</label>
+		</view>
+	</view>
+</view>
+<!--底部按钮end-->
+
+<i-new-auth needAuth="{{needAuth&&showAuthModal}}" bind:authSuccess="authSuccess" bind:cancel="authModal" needPosition="{{needPosition}}"></i-new-auth>
+
+
+<button class="fixed-service" openType="contact" >
+	<text class="iconfont icon-kefu"></text>
+	<view>客服</view>
+</button>

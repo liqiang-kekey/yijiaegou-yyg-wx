@@ -1,0 +1,17 @@
+ <!-- 优惠券 -->
+ <view wx:if="{{hasCoupon}}" class="container">
+ 	<view class="coupon-list" bindtap='receiveCoupon' wx:for="{{quan}}" wx:key="id" data-quan_id="{{item.id}}" class="card-content list-item {{item.is_get == 1? 'get':''}}">
+ 		<!-- 第一个 -->
+ 		<view class="sawtooth-bor item">
+ 			<view class="pt10 discount">
+ 				<text class="fs36" style="font-size: 40rpx;font-weight: bolder;">¥{{item.credit}}</text>
+ 				<view class="fs12" wx:if="{{item.limit_money >0}}">满{{item.limit_money}}元可用</view>
+ 				<view class="fs12" wx:else>全场通用</view>
+         <view class="fs12" >{{item.voucher_title}}</view>
+ 			</view>
+ 			<view class="textc receive">领取</view>
+ 		</view>
+
+ 	</view>
+ </view>
+ <i-new-auth needAuth="{{needAuth&&showAuthModal}}" bind:authSuccess="authSuccess" bind:cancel="authModal" needPosition="{{needPosition}}"></i-new-auth>

@@ -1,0 +1,22 @@
+<!--community/distributionCenter/pages/fanseconomy.wxml-->
+<view class="top-text">我的粉丝经济</view>
+<view class="list-header">
+    <view>粉丝事件</view><view>粉丝收益</view>
+</view>
+<scroll-view scrollY bindscrolltolower="getMore" class="list-content" style="height:{{containerHeight}}px" wx:if="{{economylist.length}}">
+    <view class="list">
+      <navigator class="list-item" wx:for="{{economylist}}" wx:key="id" >
+        <view class="item-left">
+          <view class="text-overflow1" style="width:280rpx;">
+            <text>{{item.detail}}</text>
+          </view>
+        </view>
+        <view class="item-right">
+        <view class="text-overflow1" style="width:240rpx;">
+            <view class="text-money" >{{item.money}}</view>
+            <view class="level">{{item.addtime}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>

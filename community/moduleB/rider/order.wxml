@@ -1,0 +1,109 @@
+<view class="wrap">
+  <view class="nav-bar">
+    <view class="nav-bar-inner">
+      <view bindtap="changeTabs" wx:for="{{tabs}}" wx:key="id" class="nav-bar-item {{status==item.id?'current':''}}" data-type="{{item.id}}">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="nav-bar-content">
+    <!-- 待取货 -->
+    <view class="item bg-f mb10">
+      <view class="border-bottom text-gray p15 fsz-24">订单编号: 56461531353153135135135</view>
+      <view class="shop py10 px15">
+        <view class="fsz-30 weight text-dark">店铺名称</view>
+        <view class="fsz-26 mt5">期望送达时间：2019-10-22 14:41:30 - 14:56:63</view>
+      </view>
+      <view class="px15">
+        <view class="i-flex i-aic">
+          <text class="iconfont icon-qu fsz-38" style="color:#2082f5;"></text>
+          <view class="i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+        <view class="i-flex i-aic mt10">
+          <text class="iconfont icon-song fsz-38 text-gray"></text>
+          <view class="addr i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+      </view>
+      <view class="user border-bottom p15 fsz-26">
+        <view class="weight">用户昵称：185396545665</view>
+        <view class="mt5">下单时间：2019-10-22 14:41:26</view>
+        <view class="mt5 red">配送距离4.96公里，配送费5元</view>
+      </view>
+      <view class="footer i-flex jcontent-sa py10">
+        <view class="btn">联系商家</view>
+        <view class="btn">确认取货</view>
+      </view>
+    </view>
+    <!-- 待配送 -->
+    <view class="item bg-f mb10">
+      <view class="border-bottom text-gray p15 fsz-24">订单编号: 56461531353153135135135</view>
+      <view class="goodsList py10 mx15 border-bottom mb10">
+        <view class="goods i-flex">
+          <image class="img" src="http://qiniu.liofis.com/Uploads/image/cache/goods/2020-02-29/5e5a2d9bdf0e8-400x400.jpg?imageView2/2/w/120/h/120/ignore-error/1"></image>
+          <view class="i-flex-item">
+            <view class="fsz-28">商品名称</view>
+            <view class="text-gray fsz-24 mt5">规格x1</view>
+            <view class="red fsz-26 mt5">小计¥25.00</view>
+          </view>
+        </view>
+        <view class="red fsz-28 weight mt5 text-right">合计¥25.00</view>
+      </view>
+      <view class="px15">
+        <view class="i-flex i-aic">
+          <text class="iconfont icon-qu fsz-38" style="color:#2082f5;"></text>
+          <view class="i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+        <view class="i-flex i-aic mt10">
+          <text class="iconfont icon-song fsz-38 text-gray"></text>
+          <view class="addr i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+      </view>
+      <view class="user border-bottom p15 fsz-26">
+        <view class="weight">用户昵称：185396545665</view>
+        <view class="fsz-26 mt5">期望送达时间：2019-10-22 14:41:30 - 14:56:63</view>
+        <view class="mt5 red">配送距离4.96公里，配送费5元</view>
+      </view>
+      <view class="footer i-flex jcontent-sa py10">
+        <view class="btn">配送</view>
+      </view>
+    </view>
+    <!-- 配送中 -->
+    <view class="item bg-f mb10">
+      <view class="border-bottom text-gray p15 fsz-24">订单编号: 56461531353153135135135</view>
+      <view class="goodsList py10 mx15 border-bottom mb10">
+        <view class="goods i-flex">
+          <image class="img" src="http://qiniu.liofis.com/Uploads/image/cache/goods/2020-02-29/5e5a2d9bdf0e8-400x400.jpg?imageView2/2/w/120/h/120/ignore-error/1"></image>
+          <view class="i-flex-item">
+            <view class="fsz-28">商品名称</view>
+            <view class="text-gray fsz-24 mt5">规格x1</view>
+            <view class="red fsz-26 mt5">小计¥25.00</view>
+          </view>
+        </view>
+        <view class="red fsz-28 weight mt5 text-right">合计¥25.00</view>
+      </view>
+      <view class="px15">
+        <view class="i-flex i-aic">
+          <text class="iconfont icon-qu fsz-38" style="color:#2082f5;"></text>
+          <view class="i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+        <view class="i-flex i-aic mt10">
+          <text class="iconfont icon-song fsz-38 text-gray"></text>
+          <view class="addr i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+          <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+      </view>
+      <view class="user border-bottom p15 fsz-26">
+        <view class="weight">用户昵称：185396545665</view>
+        <view class="fsz-26 mt5">期望送达时间：2019-10-22 14:41:30 - 14:56:63</view>
+        <view class="mt5 red">配送距离4.96公里，配送费5元</view>
+      </view>
+      <view class="footer i-flex jcontent-sa py10">
+        <view class="btn">联系客户</view>
+        <view class="btn">确认送达</view>
+      </view>
+    </view>
+  </view>
+</view>

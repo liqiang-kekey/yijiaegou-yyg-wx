@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "售后退款",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-load-more": "../../components/load-more/index"
+  }
+}

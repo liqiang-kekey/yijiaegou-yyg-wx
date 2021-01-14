@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "核销管理",
+  "usingComponents": {
+    "i-modal": "../../components/modal/index"
+  }
+}

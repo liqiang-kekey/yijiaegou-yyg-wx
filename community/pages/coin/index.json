@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "i-rush-spu-big": "../../components/rush-spu-big/index"
+  }
+}

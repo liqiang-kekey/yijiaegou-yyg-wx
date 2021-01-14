@@ -1,0 +1,20 @@
+<view class="nav_title">
+	<view class="nav_tab">
+		<view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item.title}}
+			<view class="{{selected==index?'nav_underline':''}}"></view>
+		</view>
+	</view>
+	<!-- tab框显示内容 -->
+	<view wx:for="{{content}}">
+    <view class="list_item" bindtap="godetail" data-id="{{item.id}}">
+			<navigator url='order?id={{item.id}}'>
+        <view class="goods_name">{{item.title}}</view>
+        <view class="goods_img">
+          <image src="{{item.bigImg}}"></image>
+        </view>
+        <view class="goods_item">{{item.address}}</view>
+			</navigator>
+			<view class='clear'></view>
+		</view>
+	</view>
+</view>

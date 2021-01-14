@@ -1,0 +1,35 @@
+/* community/pages/suyuan/content.wxss */
+.vedio-box
+{
+  width: 710rpx;
+  min-height: 500rpx;
+  margin: 0 20rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+.poster-img
+{
+  width: 710rpx;
+  border-radius: 20rpx;
+  z-index: 1;
+}
+.poster-play-img
+{
+  z-index: 99;
+  width: 100rpx;
+  height:100rpx;
+  position: absolute;
+  left: 300rpx;
+  top: 240rpx;
+}
+.poster-text
+{
+  padding-left: 30rpx;
+  height: 28rpx;
+  color: #f78076;
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  display: flex;
+  font-weight: bolder;
+}

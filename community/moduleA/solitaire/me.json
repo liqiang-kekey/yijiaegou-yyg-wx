@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的接龙",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-new-auth": "../../components/new-auth/index",
+    "i-load-more": "../../components/load-more/index",
+    "i-empty": "../../components/empty/index"
+  }
+}

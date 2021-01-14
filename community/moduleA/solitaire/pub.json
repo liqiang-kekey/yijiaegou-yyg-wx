@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "群接龙",
+  "usingComponents": {
+    "DateTimePicker": "../../components/datetimepicker/datetimepicker",
+    "chooseImage": "../../components/chooseImage/index",
+    "i-solitaire-good": "../components/solitaireGood",
+    "i-solitaire-head": "../components/solitaireHead"
+  }
+}

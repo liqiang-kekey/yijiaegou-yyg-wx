@@ -1,0 +1,58 @@
+.cube {
+  position: relative;
+  padding: 0 20rpx 5rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cube-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rpx;
+}
+
+.cube-item:last-child {
+  margin-bottom: 0;
+}
+
+.cube-one {
+  width: 710rpx;
+}
+
+.cube-left {
+  width: 275rpx;
+  height: 365rpx;
+}
+
+.cube-two {
+  width: 430rpx;
+  height: 365rpx;
+}
+
+.cube-three {
+  width: 430rpx;
+  height: 180rpx;
+}
+
+.cube-four  {
+  width: 212.5rpx;
+  height: 180rpx;
+}
+
+.w450 {
+  width: 430rpx;
+}
+
+.cube-item.two-row {
+  flex-wrap: wrap;
+}
+
+.cube-w {
+  flex: 1;
+}
+
+.cube-item.two-row .cube-w {
+  flex: initial;
+  width: 355rpx;
+}

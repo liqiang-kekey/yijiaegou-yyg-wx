@@ -1,0 +1,6 @@
+.article {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  overflow-x: hidden;
+}

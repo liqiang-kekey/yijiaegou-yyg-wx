@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "团长中心",
+  "navigationBarBackgroundColor": "#FE8464",
+  "usingComponents": {
+    "mp-actionSheet": "../../components/actionsheet/actionsheet",
+    "i-modal": "../../components/modal/index"
+  }
+}

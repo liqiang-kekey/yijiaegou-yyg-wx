@@ -1,0 +1,7 @@
+@import "/community/pages/goods/goodsDetail.wxss";
+.spuInfo .spuDetail .goodsDetailTitleImg {
+  width: 336rpx;
+  margin: 60rpx auto;
+  display: block;
+  }
+  

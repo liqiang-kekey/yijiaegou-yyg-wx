@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "拼团规则",
+  "usingComponents": {
+    "parser":"../../components/parser/parser"
+  }
+}

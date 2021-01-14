@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-new-auth": "../../components/new-auth/index",
+    "i-count-down": "../../components/count-down/index",
+    "i-seckill-spu": "../../components/seckillItem/seckillItem",
+    "i-empty": "../../components/empty/index"
+  }
+}

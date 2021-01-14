@@ -1,0 +1,29 @@
+<view class='list'>
+	<block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+		<view class="list_item">
+			<view class="item_left">
+					<view class="goods_name">{{item.goods_name}}</view>
+					<view class="line"></view>
+					<view class="card_no">识别码:{{item.card_no}}</view>
+				</view>
+				<view class="item_right">
+            <view class="sy" wx:if="{{item.status == 1}}">
+              已使用
+            </view>
+            <view  wx:if="{{item.status == 0}}" class="sy" >
+              未使用
+            </view>
+						<view  wx:if="{{item.status == 3}}" class="sy" >
+              冻结中
+            </view>
+						<view  wx:if="{{item.status == 4}}" class="sy">
+              已失效
+            </view>
+						<view  wx:if="{{item.status == 2}}" class="sy">
+              订单完成
+            </view>
+				</view>
+			<view class='clear'></view>
+		</view>
+	</block>
+</view>

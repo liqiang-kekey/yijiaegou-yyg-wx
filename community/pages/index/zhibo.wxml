@@ -1,0 +1,56 @@
+<import src="template/video.wxml"></import>
+<!--community/pages/index/zhibo.wxml-->
+<text>community/pages/index/zhibo.wxml</text>
+<!-- 视频 
+<view>
+      <video id="myVideo" src="{{hlsurl}}" controls="{{true}}" autoplay="false" poster="{{poster}}" style="width:100%;height:'auto';"></video>
+</view>-->
+<!--
+  https://v6.cdn66.cn/HLSPlayer/10385/1/1/1.m3u8
+<view>
+<live-player src="{{vediourl}}" mode="live" autoplay  style="width:100%;height:'auto';" />
+</view>
+-->
+<!-- 视频 -->
+<view>
+<block wx:if="{{isReady}}" >
+<!-- <view hidden="{{isReady ? false : true}}"> -->
+  <video id="myVideo" 
+    src="{{hlsurl}}" 
+    title="监控直播"
+    poster="{{imgsrc}}"
+    autoplay="true" 
+    object-fit="fill" 
+    bindplay="onPlay" 
+    bindpause="onPause" 
+    bindended="onEnded"
+    bindtimeupdate="onTimeUpdate"
+    bindfullscreenchange="onFullScreenChange"
+    bindwaiting="onWaiting"
+    binderror="onError"
+    bindprogress="onProgress"
+    controls >
+
+    <!-- <cover-view class="controls">
+      <cover-view class="play" bindtap="play">
+        <cover-image class="img" src="/path/to/icon_play" />
+      </cover-view>
+      <cover-view class="pause" bindtap="pause">
+        <cover-image class="img" src="/path/to/icon_pause" />
+      </cover-view>
+      <cover-view class="time">00:00</cover-view>
+    </cover-view> -->
+  </video>
+</block>
+
+<!-- 未就绪时渲染为缩略图 -->
+<block wx:else>
+  <image src="{{imgsrc}}"></image>
+</block>
+</view>
+
+<view class="btn-area">
+  <button bindtap="play">播放</button>
+  <button bindtap="pause">暂停</button>
+  <button bindtap="stop">结束</button>
+</view>

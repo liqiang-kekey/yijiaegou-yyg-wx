@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "资金管理",
+  "navigationBarBackgroundColor": "#FE8464",
+  "usingComponents": {
+    "i-load-more": "../../components/load-more/index",
+    "i-empty": "../../components/empty/index",
+    "i-fixed-bottom": "../../components/fixed-bottom/index"
+  }
+}

@@ -1,0 +1,54 @@
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.three-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1rpx;
+  border-left: 1rpx solid #cfcfcf;
+}
+
+.three-item:first-child::before {
+  content: none;
+}
+
+.three-title {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.three-money {
+  margin-top: 15rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+.item-main {
+  padding: 32rpx 40rpx;
+}
+
+.item-title {
+  height: 40rpx;
+  width: 400rpx;
+  color: #444;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-right {
+  width: 12rpx;
+  height: 22rpx;
+}

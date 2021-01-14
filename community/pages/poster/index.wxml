@@ -1,0 +1,17 @@
+<view wx:for="{{lists}}">
+	<view style="width:100%;height:auto" wx:if="{{item.types == 1}}">
+		<view bindtap="golink" data-url="{{item.link}}" data-id="{{item.id}}">
+			<image mode="widthFix" src="{{item.thumbs}}" style="width:100%;display:block"></image>
+		</view>
+	</view>
+	<view wx:else>
+    <video 
+      id="myVideo" 
+      src="{{item.videos}}" 
+      style="width:100%;"
+      poster="{{item.thumbs}}"
+      object-fit="fill"
+      style="display:block;width:100%;"
+    ></video>
+	</view>
+</view>

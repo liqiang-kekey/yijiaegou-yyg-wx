@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "积分",
+  "usingComponents": {
+    "i-new-auth": "../../components/new-auth/index",
+    "sku": "../../components/sku/index",
+    "i-modal": "../../components/modal/index",
+    "guess-like": "../components/score-guess-like/index",
+    "i-load-more": "../../components/load-more/index"
+  }
+}

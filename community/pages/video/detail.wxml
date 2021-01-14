@@ -1,0 +1,18 @@
+<scroll-view scrollY="false" style="height:100vh;">
+  <view class="main">
+    <view class="section">
+      <video autoplay loop autoPauseIfOpenNative="true" controls="{{false}}" direction="0" id="myVideo" objectFit="{{is_heng==0?'fill':'contain'}}" showFullscreenBtn="{{false}}" src="{{goods.video}}"></video>
+    </view>
+    <!-- 商品 -->
+    <cover-view class="goods" wx:if="{{goods}}">
+      <cover-view catchtap="goDetails" class="i-flex">
+        <cover-image class="img" src="{{goods.image_thumb}}"></cover-image>
+        <cover-view class="i-flex i-flex-col i-flex-item" style="justify-content: space-between;width:0;position: relative;">
+          <cover-view class="text-overflow2">{{goods.goodsname}}</cover-view>
+          <cover-view class="salePrice">¥ {{goods.price_front}}.{{goods.price_after}}</cover-view>
+          <button class="buy-btn">立即购买</button>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </view>
+</scroll-view>

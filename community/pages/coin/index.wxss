@@ -1,0 +1,166 @@
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+.empty-wrap{
+  padding-top: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-wrap .empty-img {
+  width: 218rpx;
+  height: 218rpx;
+}
+.empty-wrap .empty-txt {font-size: 30rpx;
+  font-weight: 400;
+  color: #777;
+  margin-top: 32rpx;  
+}
+.goods_name{
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  font-weight: bolder;
+  width: 100%;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.btns{
+  width: 70%;
+  border-radius: 30rpx;
+  background: #13bb4e;
+  line-height: 70rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+.card_no{
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  font-weight: bolder;
+  color:#13bb4e;
+}
+.goods_item{
+  font-size: 24rpx;
+  color: gray;
+  text-align: center;
+  margin-top: 10rpx;
+}
+navigator {
+  display: inline;
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.list .list_item {
+  margin-top: 10px;
+  padding: 10px;
+  height: 410rpx;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.list .list_item .img {
+  width: 240rpx;
+  height: 240rpx;
+  position: relative;
+  float: left;
+}
+
+.list .list_item .img image {
+
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+
+}
+
+.list .list_item .info {
+  width: 59%;
+  float: right;
+  height: 100px;
+  position: relative;
+}
+
+.list .list_item .info .title {
+  color: #333;
+  font-size: 30rpx;
+  height: 32rpx;
+  width: 400rpx;
+  margin-bottom: 12rpx;
+  font-weight: bold;
+  position: relative;
+
+}
+
+.list_item {
+  display: block;
+  background: #fff;
+  width: 710rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 40rpx rgba(0, 0, 0, 0.05);
+  margin: 0 auto 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+
+}
+
+.spu-count-border {
+  display: inline-flex;
+  border: 1rpx solid #f78076;
+  border-radius: 20rpx;
+  overflow: hidden;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-color: #13bb4e;
+}
+
+.spu-count-border text {
+  padding: 0 10rpx;
+  color: #13bb4e;
+
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.btn {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 54rpx;
+  height: 54rpx;
+
+
+}
+
+.list .list_item .info .price {
+  color: #FF2727;
+
+
+  overflow: hidden;
+  margin-top: 10rpx;
+  font-size: 46rpx;
+  line-height: 42rpx;
+  margin: 0;
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.list .list_item .info .num {
+
+  color: #747474;
+  margin: 20rpx 0;
+  font-size: 15px;
+}

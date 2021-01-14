@@ -1,0 +1,13 @@
+<view class="wrap">
+	<!-- 猜你喜欢 -->
+	<view class='like i-class' wx:if="{{list.length&&noData!=1}}">
+		<view class='like-title'>——积分兑换——</view>
+		<view class='like-list'>
+			<guess-like bind:openSku="openSku" item="{{item}}" wx:for="{{list}}" wx:key="id" bind:vipModal="vipModal"></guess-like>
+		</view>
+		<i-load-more iClass="loadMore" loading="{{loadMore}}" tip="{{loadText}}" wx:if="{{!noMore}}"></i-load-more>
+	</view>
+</view>
+<i-vip-modal visible="{{showVipModal}}" imgUrl="{{pop_vipmember_buyimage}}" />
+<sku visible="{{visible}}" skuList="{{skuList}}" cur_sku_arr="{{cur_sku_arr}}" bind:cancel="closeSku" sku_val="{{sku_val}}" sku="{{sku}}" buyType="integral" goodsid="{{addCar_goodsid}}" bind:vipModal="vipModal"></sku>
+<i-new-auth needAuth="{{needAuth&&showAuthModal}}" bind:authSuccess="authSuccess" bind:cancel="authModal" needPosition="{{false}}"></i-new-auth>

@@ -1,0 +1,22 @@
+.goodtype {
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #fff;
+}
+
+.goodtype-item {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.goodtype-w {
+  flex: 1;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-button": "../button/index",
+    "i-img": "../img/index",
+    "i-sku": "../sku/index",
+    "i-router-link": "../router-link/router-link"
+  }
+}

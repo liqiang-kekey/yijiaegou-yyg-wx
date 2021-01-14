@@ -1,0 +1,9 @@
+<!--community/pages/welcome.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{imageAutoplay}}" interval="{{intervalAutoTime}}" current="{{imagecurrent}}">
+    <block wx:for="{{imgsData}}" wx:for-index="imageIndex" wx:key="imageKey">
+      <swiper-item class="swiper-items"  >
+        <image class="swiper-image" src="{{item.imageUrl}}" bindtap="goToImgeUrl" mode="aspectFill" data-href="{{item.imageHref}}" data-idx="{{item.imageid}}"></image>
+        <!--<button class="button-img" bindtap="start" wx:if="{{imageIndex > 0}}" data-href="{{item.imageHref}}" >{{buttonName}}</button>-->
+      </swiper-item>
+    </block>
+</swiper>

@@ -1,0 +1,30 @@
+<view class='list'>
+	<view wx:if="{{dataList.length>0}}">
+		<block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+			<view class="list_item">
+				<navigator url='mycoin?id={{item.id}}'>
+					<view class='img'>
+						¥{{item.pay_money}}
+					</view>
+					<view class='info'>
+						<view class='goods_name'>{{item.goods_name}}</view>
+						<view class='goods_item'>
+							<text>购卡时间{{item.create_time}}</text>
+						</view>
+
+					</view>
+				</navigator>
+				<view class="footer">
+					<view wx:if="{{item.status==1 && item.coinstatus==0}}" bindtap="refound" data-id="{{item.id}}" class="btn-1 mar-left-8 btns">取消订单</view>
+					<view bindtap="detail" data-id="{{item.id}}" class="btn-1 mar-left-8 btns">查看详情</view>
+				</view>
+				<view class='clear'></view>
+			</view>
+		</block>
+	</view>
+	<view class="empty-wrap" wx:else >
+		<image class="empty-img" src="../../images/noData.png"></image>
+		<view class="empty-txt">你还没有购买任何套餐！</view>
+	</view>
+
+</view>

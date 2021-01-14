@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "i-auth": "../../components/new-auth/index"
+  }
+}

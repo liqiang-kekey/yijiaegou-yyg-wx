@@ -1,0 +1,9 @@
+<!--community/pages/suyuan/content.wxml-->
+<!--<text>community/pages/suyuan/content.wxml</text>-->
+<view class="active-item" wx:for="{{devlist}}" wx:key="id" wx:if="{{devlist.length>0}}">
+  <view class="vedio-box">
+    <image class='poster-img' src="{{item.imgsrc}}" mode="widthFix" bindtap="goLink" data-url="/community/pages/suyuan/live?sn={{item.sn}}"></image>
+    <image class='poster-play-img' src='../../images/play.png' bindtap="goLink" data-url="/community/pages/suyuan/live?sn={{item.sn}}"> </image>
+    <text class="poster-text">摄像头位置：{{item.name}}</text>
+  </view>
+</view>

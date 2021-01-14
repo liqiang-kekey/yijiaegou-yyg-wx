@@ -1,0 +1,81 @@
+<view>
+  <view class="i-flex i-aic bg-f p15 m15 rounded shadow">
+    <image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep7xRIpyHwwEyia23j4qSIWoBKwXQ3sCsgq9pJdlKvKhFxesZYNHIichWOoJBVx3IibeEibsymgyaWOUA/132"></image>
+    <text class="i-flex-item mx10 fsz-28">莲花小区888</text>
+    <view bindtap="handleHexiaoModal" class="bule fsz-24">切换店铺 <text class="iconfont icon-youjiantou fsz-24"></text></view>
+  </view>
+
+  <view class='three py15 bg-f m15 rounded shadow'>
+    <view class='three-item'>
+      <view class='three-title'>今日核销(次)</view>
+      <view class='three-money'>10</view>
+    </view>
+    <view class='three-item'>
+      <view class='three-title'>累计核销(次)</view>
+      <view class='three-money'>100</view>
+    </view>
+  </view>
+
+  <view class='menu bg-f m15 rounded shadow'>
+    <navigator class="border-bottom" url='/community/moduleB/writeoff/member'>
+      <view class="item-main i-flex i-flex-alc bor-bottom">
+        <view class="item-title i-flex-item">核销人员</view>
+        <view class="tool-right">
+          <text class="text-gray">5</text><image class="icon-right ml5" src="../../images/rightArrowImg.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url=''>
+      <view class="item-main i-flex i-flex-alc bor-bottom">
+        <view class="item-title i-flex-item">商品核销</view>
+        <view class="tool-right">
+          <image class="icon-right " src="../../images/rightArrowImg.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<!-- 核销弹窗 -->
+<i-modal scrollUp="{{true}}" visible="{{showHexiaoModal}}" bind:cancel="handleHexiaoModal">
+  <view class="sku-card">
+    <view class="weight fsz-32 pb10 text-center">门店选择</view>
+    <scroll-view scroll-y style="height: 60vh;">
+      <view class="border-bottom i-flex i-aic py10">
+        <view class="i-flex-item">
+          <view class="fsz-28 weight mb5">测试门店1</view>
+          <view class="fsz-22">门店地址1</view>
+        </view>
+        <text class="iconfont icon-youjiantou fsz-28"></text>
+      </view>
+      <view class="border-bottom i-flex i-aic py10">
+        <view class="i-flex-item">
+          <view class="fsz-28 weight mb5">测试门店1</view>
+          <view class="fsz-22">门店地址1</view>
+        </view>
+        <text class="iconfont icon-youjiantou fsz-28"></text>
+      </view>
+      <view class="border-bottom i-flex i-aic py10">
+        <view class="i-flex-item">
+          <view class="fsz-28 weight mb5">测试门店1</view>
+          <view class="fsz-22">门店地址1</view>
+        </view>
+        <text class="iconfont icon-youjiantou fsz-28"></text>
+      </view>
+      <view class="border-bottom i-flex i-aic py10">
+        <view class="i-flex-item">
+          <view class="fsz-28 weight mb5">测试门店1</view>
+          <view class="fsz-22">门店地址1</view>
+        </view>
+        <text class="iconfont icon-youjiantou fsz-28"></text>
+      </view>
+      <view class="border-bottom i-flex i-aic py10">
+        <view class="i-flex-item">
+          <view class="fsz-28 weight mb5">测试门店1</view>
+          <view class="fsz-22">门店地址1</view>
+        </view>
+        <text class="iconfont icon-youjiantou fsz-28"></text>
+      </view>
+    </scroll-view>
+  </view>
+</i-modal>

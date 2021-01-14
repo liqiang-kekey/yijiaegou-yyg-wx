@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "i-new-auth": "../../components/new-auth/index",
+    "i-order-notify": "../../components/order-notify/index",
+    "i-relative-goods-list": "../goods/relativeGoodsList",
+    "i-change-community": "../../components/changeCommunity/index",
+    "guess-like": "../../components/guess-like/index",
+    "i-vip-price": "../../components/vipPrice/vipPrice",
+    "i-sub-notice": "../../components/subNotice/index",
+    "parser":"../../components/parser/parser",
+    "i-modal": "../../components/modal/index"
+  }
+}

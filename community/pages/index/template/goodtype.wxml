@@ -1,0 +1,8 @@
+<!-- 产品分类 -->
+<template name="goodtype">
+  <view class="goodtype" wx:for="{{data}}" wx:key="indexType">
+    <view class='goodtype-item'>
+      <image wx:for="{{item}}" wx:key="timeIndexType" src="{{item.logo}}"  class="goodtype-w" data-id="{{item.id}}" bindtap="toShowGoodType"></image>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,19 @@
+/* community/pages/suyuan/live.wxss */
+.loading
+{
+  text-align: center;
+  font-size: larger;
+}
+.vedio-box
+{
+  width: 710rpx;
+  margin: 0 20rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+.poster-img
+{
+  width: 710rpx;
+  border-radius: 20rpx;
+  z-index: 1;
+}

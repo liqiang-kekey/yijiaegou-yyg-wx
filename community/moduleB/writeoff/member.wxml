@@ -1,0 +1,11 @@
+<view class="fixed-top">
+  <!--搜索框begin-->
+  <view class='search-bar'>
+    <view class='search-box'>
+      <input class='ipt' placeholder="输入姓名收/手机号/会员名" confirm-type="搜索" type="text" bindconfirm="goResult"></input>
+      <view class='search-icon'>
+        <text class="iconfont icon-sousuo1"></text>
+      </view>
+    </view>
+  </view>
+</view>

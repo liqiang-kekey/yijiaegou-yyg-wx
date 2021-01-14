@@ -1,0 +1,100 @@
+<i-auth bind:authSuccess="authSuccess" needAuth="{{needAuth}}">
+  <view class='placeOrderBox'>
+    <view class="address-content">	
+      <view class="tab-nav {{tabLength==1?'tab-nav-one':''}}" style="border-color:{{skin.color}}">
+				<view bindtap="tabSwitch" wx:for="{{tabList}}" wx:key="id" class="tab-nav-item {{tabIdx==item.id?'active':''}}" data-idx="{{item.id}}" wx:if="{{item.enabled}}" style="{{tabIdx==item.id?'background:'+skin.color:''}}">
+					<span>{{item.name}}</span>
+				</view>
+			</view>    
+			<view class="receiver">
+				<text space="ensp">{{(tabIdx==0)?"提 货 人":"收 货 人"}}： </text>
+				<input bindinput="changeReceiverName" class="receive-name" placeholder="提货人" type="text" value="{{tabAddress[tabIdx].name}}" focus='{{focus_name}}'></input>
+			</view>
+			<view class="receiver">
+				<text>手机号码：</text>
+				<input bindinput="bindReceiverMobile" class="mobile" placeholder="手机号码" type="text" value="{{tabAddress[tabIdx].mobile}}" focus='{{focus_mobile}}'></input>
+			</view>
+			<view class='address-box' wx:if="{{tabIdx!=0}}">
+				<block wx:if="{{tabIdx==2}}">
+					<view class="receiver">
+						<text>所在地区： </text>
+						<view class='sel-btn' bindtap='choseLocation'>{{tabAddress[tabIdx].region[0] || "选择地址"}}{{tabAddress[tabIdx].region[1]}}{{tabAddress[tabIdx].region[2]}}</view>
+						<image src='../../images/rightArrowImg.png' class='icon-right'></image>
+					</view>
+					<view class="receiver align-start">
+						<text>详细地址：</text>
+						<textarea hidden="{{showConfirmModal}}" class="receive-name" bindinput="changeReceiverAddress" type="text" value="{{tabAddress[tabIdx].receiverAddress}}" placeholder="详细地址" focus='{{focus_addr}}' />
+						</view>
+        </block>
+        <block wx:else>
+          <view class='receiver align-start' bindtap='choseLocation'>
+            <text>所在位置：</text>
+            <view class='sel-btn tuan-pos'>{{tabAddress[tabIdx].receiverAddress}}
+              <image class='icon-right' src='../../images/rightArrowImg.png'></image>
+            </view>
+          </view>
+          <view class="receiver align-start">
+            <text>楼号门牌：</text>
+            <textarea wx:if="{{!showConfirmModal}}" class="receive-name" bindinput="changeTuanAddress" type="text" value="{{tabAddress[tabIdx].lou_meng_hao}}" placeholder="例如:A座106室" focus='{{focus_addr}}' />
+          </view>
+        </block>
+      </view>
+      <view wx:if="{{tabIdx==2}}" class="use-wx-address" bindtap='getWxAddress' style="color:{{skin.color}}">+使用微信地址</view>
+      <block wx:if="{{tabIdx!=2&&is_hexiao!=1}}">
+        <p class="address-red">{{groupInfo.owner_name}}信息：{{disUserName}} ({{pickUpCommunityName}})</p>
+        <p class="address">{{tabIdx==0?"提货地点":groupInfo.owner_name+"位置"}}：{{pickUpAddress}}</p>
+      </block>
+    </view>
+    <view class="address-line">
+      <image src="../../images/icon-address-line.png"></image>
+    </view>
+    <view class="card-container">
+      <i-card iClass="card-content">
+        <view class="card-header" slot="header" style="color:{{skin.color}}">
+          
+          <view class="cart-header-right">1件商品</view>
+        </view>
+        <view class="cart-item" slot="content">
+          <view class="sku-item">
+              <i-img defaultImage="../../images/placeholder-refund.png" height="60" iClass="sku-img" loadImage="{{coin.goods_imgs}}" width="60"></i-img>
+              <view class="sku-msg">
+                <view class="sku-title">
+                  {{coin.goods_name}}
+                </view>
+                
+                <view class="original-price">
+                  <block >¥</block>{{coin.price}} ×1
+              
+                </view>
+                <view class="sku-price">小计：
+                  <span>
+                    <block >¥</block>{{coin.price}}
+                  </span>
+                </view>
+              </view>
+            </view>
+        </view>
+        <view class="cart-footer" slot="footer" >
+          <input bindinput="bindInputMessage" class="order-message" placeholder="备注" type="text" data-idx="{{key}}"></input> 
+        </view>
+      </i-card>
+    </view>
+
+
+    
+    <i-fixed-bottom>
+      <view class="fixed-content">
+        <view class="fixed-left">
+          
+          <view class="h1" >
+            总价值：<span>¥{{coin.price}}</span>
+          </view>
+          
+        </view>
+        <view wx:if="{{btnDisable}}" class="fixed-bar-btn bgDisabled">{{btnText?btnText:"立即兑换"}}</view>
+        <view bindtap="prepay" class="fixed-bar-btn"  style="background:{{skin.color}}">立即兑换</view>
+      </view>
+    </i-fixed-bottom>
+  </view>
+</i-auth>
+

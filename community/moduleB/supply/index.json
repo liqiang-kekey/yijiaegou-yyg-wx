@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "供应商管理中心",
+  "navigationBarBackgroundColor": "#FE8464",
+  "usingComponents": {
+    "i-fixed-bottom": "../../components/fixed-bottom/index"
+  }
+}

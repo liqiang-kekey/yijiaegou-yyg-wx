@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "详情",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "parser":"../../components/parser/parser"
+  }
+}

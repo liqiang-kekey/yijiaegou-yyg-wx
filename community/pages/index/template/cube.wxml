@@ -1,0 +1,52 @@
+<!-- 魔方图 -->
+<template name="cube">
+  <view class="cube" wx:if="{{data.length}}">
+    <block wx:for="{{data}}" wx:key="id">
+      <!-- 1张 -->
+      <view class='cube-item' wx:if="{{item.type==1}}">
+        <image src="{{item.thumb.cover[0]}}" class="cube-one rounded" mode="widthFix" data-index="{{index}}" data-idx="0" bindtap="goCube"></image>
+      </view>
+      <!-- 2张 -->
+      <view class='cube-item' wx:if="{{item.type==2}}">
+        <i-img iClass="cube-left rounded" loadImage="{{item.thumb.cover[0]}}" width="295" height="365" data-index="{{index}}" data-idx="0" bindtap="goCube"></i-img>
+        <i-img iClass="cube-two rounded" loadImage="{{item.thumb.cover[1]}}" width="450" height="365" data-index="{{index}}" data-idx="1" bindtap="goCube"></i-img>
+      </view>
+      <!-- 3张 -->
+      <view class='cube-item' wx:if="{{item.type==3}}">
+        <i-img iClass="cube-left rounded" loadImage="{{item.thumb.cover[0]}}" width="275" height="365" data-index="{{index}}" data-idx="0" bindtap="goCube"></i-img>
+        <view class="i-flex-col i-flex-spb">
+          <i-img iClass="cube-three rounded" loadImage="{{item.thumb.cover[1]}}" width="430" height="180" data-index="{{index}}" data-idx="1" bindtap="goCube"></i-img>
+          <i-img iClass="cube-three rounded" loadImage="{{item.thumb.cover[2]}}" width="430" height="180" data-index="{{index}}" data-idx="2" bindtap="goCube"></i-img>
+        </view>
+      </view>
+      <!-- 4张 -->
+      <view class='cube-item' wx:if="{{item.type==4}}">
+        <i-img iClass="cube-left rounded" loadImage="{{item.thumb.cover[0]}}" width="275" height="365" data-index="{{index}}" data-idx="0" bindtap="goCube"></i-img>
+        <view class="i-flex-col i-flex-spb">
+          <i-img iClass="cube-three rounded" loadImage="{{item.thumb.cover[1]}}" width="430" height="180" data-index="{{index}}" data-idx="1" bindtap="goCube"></i-img>
+          <view class="i-flex i-flex-spb w450">
+            <i-img iClass="cube-four rounded" loadImage="{{item.thumb.cover[2]}}" width="212.5" height="180" data-index="{{index}}" data-idx="2" bindtap="goCube"></i-img>
+            <i-img iClass="cube-four rounded" loadImage="{{item.thumb.cover[3]}}" width="212.5" height="180" data-index="{{index}}" data-idx="3" bindtap="goCube"></i-img>
+          </view>
+        </view>
+      </view>
+      <!-- 均分 -->
+      <!-- 2张 -->
+      <view class='cube-item' wx:if="{{item.type==5}}">
+        <image src="{{imgItem}}" class="cube-w" mode="widthFix" wx:for="{{item.thumb.cover}}" wx:for-index="idx" wx:for-item="imgItem" wx:key="idx" data-index="{{index}}" data-idx="{{idx}}" bindtap="goCube"></image>
+      </view>
+      <!-- 3张 -->
+      <view class='cube-item' wx:if="{{item.type==6}}">
+        <image src="{{imgItem}}" class="cube-w" mode="widthFix" wx:for="{{item.thumb.cover}}" wx:for-index="idx" wx:for-item="imgItem" wx:key="idx" data-index="{{index}}" data-idx="{{idx}}" bindtap="goCube"></image>
+      </view>
+      <!-- 1*4张 -->
+      <view class='cube-item' wx:if="{{item.type==7}}">
+        <image src="{{imgItem}}" class="cube-w" mode="widthFix" wx:for="{{item.thumb.cover}}" wx:for-index="idx" wx:for-item="imgItem" wx:key="idx" data-index="{{index}}" data-idx="{{idx}}" bindtap="goCube"></image>
+      </view>
+      <!-- 2*2 -->
+      <view class='cube-item two-row' wx:if="{{item.type==8}}">
+        <image src="{{imgItem}}" class="cube-w" mode="widthFix" wx:for="{{item.thumb.cover}}" wx:for-index="idx" wx:for-item="imgItem" wx:key="idx" data-index="{{index}}" data-idx="{{idx}}" bindtap="goCube"></image>
+      </view>
+    </block>
+  </view>
+</template>

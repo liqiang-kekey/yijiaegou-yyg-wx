@@ -1,0 +1,33 @@
+<!--community/pages/suyuan/live.wxml-->
+<view wx:if="{{!isReady}}">
+      <view wx:if="{{ifShowWeb}}">
+            <web-view src="https://suyuan.yijiaegou.com/{{cameraid}}.html"></web-view>
+      </view>
+      <view wx:else class="loading">
+            {{loadingtime}}
+      </view>
+</view>
+<view>
+      <video id="myVideo" 
+      src="{{hlsurl}}" 
+      controls="{{true}}" 
+      autoplay="true"
+      poster="{{poster}}" 
+      style="width:100%;height:'auto';"
+      bindplay="play" 
+      bindpause="onPause" 
+      bindended="onEnded"
+      bindtimeupdate="onTimeUpdate"
+      bindfullscreenchange="onFullScreenChange"
+      bindwaiting="onWaiting"
+      binderror="onError"
+      bindprogress="onProgress"
+      controls="true"
+      >
+      </video>
+</view>
+<view class="vedio-box" >
+<image class='poster-img' src="{{suyuanimg}}" mode="widthFix" ></image>
+</view>
+
+

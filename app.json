@@ -1,0 +1,222 @@
+{
+  "pages": [
+    "community/pages/index/welcome",
+    "community/pages/index/index",
+    "community/pages/quan/quan",
+    "community/pages/myinfo/index",
+    "community/pages/poster/index",
+    "community/pages/lucky/lucky",
+    "community/pages/coin/order",
+    "community/pages/business/index",
+    "community/pages/business/detail",
+    "community/pages/packages/my",
+    "community/pages/packages/order",
+    "community/pages/packages/mycoin",
+    "community/pages/coin/index",
+    "community/pages/packages/index",
+    "community/pages/packages/detail",
+    "community/pages/packages/placeOrder",
+    "community/pages/goods/goodsDetail",
+    "community/pages/order/shopCart",
+    "community/pages/user/me",
+    "community/pages/position/community",
+    "community/pages/position/search",
+    "community/pages/order/index",
+    "community/pages/order/order",
+    "community/pages/order/refunddetail",
+    "community/pages/user/protocol",
+    "community/pages/user/articleProtocol",
+    "community/pages/order/refund",
+    "community/pages/order/evaluate",
+    "community/pages/position/cities",
+    "community/pages/order/placeOrder",
+    "community/pages/goods/buyRecords",
+    "community/pages/goods/comment",
+    "community/pages/supply/recruit",
+    "community/pages/supply/apply",
+    "community/pages/web-view",
+    "community/pages/order/goods_express",
+    "community/pages/order/shareOrderInfo",
+    "community/pages/user/coupon",
+    "community/pages/index/share",
+    "community/pages/type/index",
+    "community/pages/user/rechargeDetails",
+    "community/pages/user/charge",
+    "community/pages/type/search",
+    "community/pages/type/result",
+    "community/pages/goods/industrial",
+    "community/pages/supply/index",
+    "community/pages/supply/home",
+    "community/pages/refund/refundList",
+    "community/pages/type/details",
+    "community/pages/user/rule",
+    "community/pages/index/zhibo",
+    "community/pages/suyuan/content",
+    "community/pages/suyuan/live",
+    "community/pages/type/type-item-big"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "community/pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "community/pages/type/index",
+        "text": "分类"
+      },
+      {
+        "pagePath": "community/pages/order/shopCart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "community/pages/user/me",
+        "text": "我的"
+      }
+    ],
+    "color": "#fff",
+    "selectedColor": "#fff",
+    "backgroundColor": "#fff",
+    "borderStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 20000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "为了更好的服务您，请授权允许"
+    }
+  },
+  "subPackages": [
+    {
+      "name": "distributionCenter",
+      "root": "community/distributionCenter",
+      "pages": [
+        "pages/share",
+        "pages/member",
+        "pages/memberInfo",
+        "pages/details",
+        "pages/me",
+        "pages/recruit",
+        "pages/apply",
+        "pages/excharge",
+        "pages/exchargeRecord",
+        "pages/goodsDetails",
+        "pages/fanseconomy",
+        "pages/fans",
+        "pages/rule"
+      ]
+    },
+    {
+      "name": "moduleA",
+      "root": "community/moduleA",
+      "pages": [
+        "special/index",
+        "special/list",
+        "pin/goodsDetail",
+        "pin/share",
+        "pin/me",
+        "pin/vip",
+        "pin/index",
+        "pin/income",
+        "pin/excharge",
+        "pin/exchargeRecord",
+        "vip/upgrade",
+        "score/signin",
+        "integral/integral",
+        "score/scoreDetails",
+        "menu/index",
+        "menu/fav",
+        "menu/subcate",
+        "menu/list",
+        "menu/details",
+        "seckill/list",
+        "solitaire/pub",
+        "solitaire/index",
+        "solitaire/details",
+        "video/index",
+        "video/detail",
+        "solitaire/me",
+        "solitaire/groupIndex",
+        "solitaire/addGood",
+        "solitaire/groupDetails",
+        "groupCenter/index",
+        "groupCenter/recruit",
+        "groupCenter/apply",
+        "groupCenter/communityMembers",
+        "groupCenter/distributionList",
+        "groupCenter/settlementList",
+        "groupCenter/settlementDetail",
+        "groupCenter/editInfo",
+        "groupCenter/groupList",
+        "groupCenter/groupDetail",
+        "groupCenter/buyHistory",
+        "groupCenter/pendingDeliveryOrders",
+        "groupCenter/wallet",
+        "groupCenter/cashList",
+        "groupCenter/detailsList",
+        "groupCenter/list",
+        "groupCenter/listDetails",
+        "groupCenter/memberList",
+        "groupCenter/setting",
+        "groupCenter/closure",
+        "groupCenter/addHexiao",
+        "groupCenter/bind_member_hexiao",
+        "groupCenter/goodsManage",
+        "groupCenter/gruopInfo",
+        "groupCenter/headlist",
+        "groupCenter/recommend"
+      ]
+    },
+    {
+      "name": "moduleB",
+      "root": "community/moduleB",
+      "pages": [
+        "index/index",
+        "writeoff/index",
+        "index/auth",
+        "live/index",
+        "writeoff/member",
+        "rider/index",
+        "rider/order",
+        "rider/grab",
+        "supply/index",
+        "live/replay",
+        "supply/goodsManage",
+        "supply/orderManage",
+        "generalmall/index",
+        "supply/moneyManage",
+        "supply/excharge",
+        "supply/exchargeRecord",
+        "supply/orderDetails",
+        "supply/editSku"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "community/pages/user/me": {
+      "network": "all",
+      "packages": [
+        "moduleA",
+        "distributionCenter",
+        "moduleB"
+      ]
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-vip-modal": "/community/components/vipModal/index"
+  },
+  "plugins": {
+    "live-player-plugin": {
+      "version": "1.2.5",
+      "provider": "wx2b03c6e691cd7370"
+    }
+  }
+}

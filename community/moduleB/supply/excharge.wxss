@@ -1,0 +1,13 @@
+@import "/community/resource/css/excharge.wxss";
+
+.form-group label {
+  display: flex;
+  font-size: 26rpx;
+  align-items: center;
+  padding: 5rpx 0 15rpx;
+}
+
+.form-group label input {
+  flex: 1;
+  border: 0;
+}

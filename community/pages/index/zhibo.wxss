@@ -1,0 +1,15 @@
+/* community/pages/index/zhibo.wxss */
+
+#myVideo,
+image {
+  width: 100%;
+}
+
+.btn-area {
+
+  padding: 50rpx
+}
+
+button {
+  margin-top: 20rpx;
+}

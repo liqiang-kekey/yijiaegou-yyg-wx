@@ -1,0 +1,22 @@
+<view class='list'>
+	<view wx:if="{{dataList.length>0}}">
+		<block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+			<view class="list_item">
+				<navigator url='order?id={{item.id}}'>
+					<view class="goods_name">{{item.goods_name}}</view>
+					<view class="goods_item">发卡时间:{{item.addtimes}}</view>
+					<view class="goods_item">所属卡:{{item.card_name}}</view>
+					<view class="line"></view>
+					<view class="card_no">{{item.card_no}}</view>
+					<view class="goods_item">兑换识别码</view>
+					<button class="btns">前往兑换</button>
+				</navigator>
+				<view class='clear'></view>
+			</view>
+		</block>
+	</view>
+	<view class="empty-wrap" wx:else>
+		<image class="empty-img" src="../../images/noData.png"></image>
+		<view class="empty-txt">你还没有任何兑换券！</view>
+	</view>
+</view>

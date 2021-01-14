@@ -1,0 +1,86 @@
+<i-auth bind:authSuccess="authSuccess" needAuth="{{needAuth}}">
+	<view class='placeOrderBox'>
+		<view class="address-content">
+
+			<view class="receiver">
+				<text space="ensp">{{(tabIdx==0)?"提 货 人":"收 货 人"}}： </text>
+				<input bindinput="changeReceiverName" class="receive-name" placeholder="提货人" type="text" value="" focus='{{focus_name}}'></input>
+			</view>
+			<view class="receiver">
+				<text>手机号码：</text>
+				<input bindinput="bindReceiverMobile" class="mobile" placeholder="手机号码" type="text" value="" focus='{{focus_mobile}}'></input>
+			</view>
+		</view>
+		<view class="address-line">
+			<image src="../../images/icon-address-line.png"></image>
+		</view>
+		<view class="card-container">
+			<i-card iClass="card-content">
+				<view class="card-header" slot="header" style="color:{{skin.color}}">
+
+					<view class="cart-header-right">1件商品</view>
+				</view>
+				<view class="cart-item" slot="content">
+					<view class="sku-item">
+						<i-img defaultImage="../../images/placeholder-refund.png" height="60" iClass="sku-img" loadImage="{{goods.bigImg}}" width="60"></i-img>
+						<view class="sku-msg">
+							<view class="sku-title">
+								{{goods.goodsname}}
+							</view>
+
+							<view class="original-price">
+								<block>¥</block>{{goods.price}} ×1
+
+							</view>
+							<view class="sku-price">小计：
+								<span>
+									<block>¥</block>{{goods.price}}
+								</span>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="cart-footer" slot="footer" wx:if="{{is_open_order_message==1}}">
+					<input bindinput="bindInputMessage" class="order-message" placeholder="备注" type="text" data-idx="{{key}}"></input>
+				</view>
+			</i-card>
+		</view>
+
+
+		<block>
+			<!-- 普通商品 -->
+			<view class="act-content">
+				<view class="oc-payment" avalonctrl="oc_payment" bindtap="ck_wxpays">
+					<view class="oc-payment-item {{ck_yupay==0?'oc-payment-selected':''}}" style="{{ck_yupay==0?'color:'+skin.color:''}}">
+						<text class="iconfont icon-weixinzhifu oc-payment-icon" style="color:#00c800;"></text>
+						<view class="oc-payment-method">微信支付</view>
+						<view class="oc-payment-recommend" style="color:{{skin.color}};border-color:{{skin.color}}">推荐</view>
+					</view>
+				</view>
+			</view>
+			
+				<view class="address-content">
+				<view class="receiver">
+					<text>推荐人ID:</text>
+					<input bindinput="bindAgentId" class="receive-name" placeholder="请输入推荐人ID" type="number" value=""></input>
+				</view>
+			</view>
+
+		</block>
+		<i-fixed-bottom>
+			<view class="fixed-content">
+				<view class="fixed-left">
+
+					<view class="h1">
+						合计：<span>¥{{goods.price}}</span>
+					</view>
+					<view class="h2">
+						<em>总额：¥{{goods.price}}</em>
+					</view>
+				</view>
+				<view wx:if="{{btnDisable}}" class="fixed-bar-btn bgDisabled">{{btnText?btnText:"立即支付"}}</view>
+				<view bindtap="prepay" class="fixed-bar-btn" style="background:{{skin.color}}">立即支付</view>
+			</view>
+		</i-fixed-bottom>
+	</view>
+</i-auth>

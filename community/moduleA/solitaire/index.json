@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "群接龙",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-load-more": "../../components/load-more/index",
+    "i-empty": "../../components/empty/index",
+    "i-solitaire-head": "../components/solitaireHead",
+    "i-change-community": "../../components/changeCommunity/index",
+    "i-tabbar": "../../components/tabbar/index"
+  }
+}

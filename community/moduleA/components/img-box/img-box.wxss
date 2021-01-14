@@ -1,0 +1,75 @@
+@import "../../../../icon.wxss";
+
+.img-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.img-box .img {
+  display: block;
+  width: 100%;
+  border-radius: 10rpx 10rpx 0 0;
+  overflow: hidden;
+}
+
+.img-box .play {
+  position: absolute;
+  font-size: 42rpx;
+  right: 10rpx;
+  top: 10rpx;
+  color: rgba(0, 0, 0, .6);
+  z-index: 10;
+}
+
+.img-box .title {
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 15rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.img-box .cont {
+  padding: 20rpx;
+}
+
+.img-box .user {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 22rpx;
+}
+
+.img-box .user .avatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.img-box .user .nickname {
+  max-width: 130rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.img-box .user .iconfont {
+  margin-right: 5rpx;
+  color: #999;
+  font-size: 34rpx;
+  transition: all 200ms ease-in;
+}
+
+.img-box .user .iconfont.active {
+  color: #ff5344;
+}

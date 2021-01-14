@@ -1,0 +1,27 @@
+<view class="item bg-f mb10">
+    <view class="border-bottom text-gray p15 fsz-24">订单编号: 56461531353153135135135</view>
+    <view class="shop py10 px15">
+        <view class="fsz-30 weight text-dark">店铺名称</view>
+        <view class="fsz-26 mt5">期望送达时间：2019-10-22 14:41:30 - 14:56:63</view>
+    </view>
+    <view class="px15">
+        <view class="i-flex i-aic">
+            <text class="iconfont icon-qu fsz-38" style="color:#2082f5;"></text>
+            <view class="i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+            <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+        <view class="i-flex i-aic mt10">
+            <text class="iconfont icon-song fsz-38 text-gray"></text>
+            <view class="addr i-flex-item mx10 fsz-26">长江奚落563-2号长江奚落563-2号长江奚落563-2号长江奚落563-2号</view>
+            <text class="iconfont icon-ditu1 text-sucess fsz-38"></text>
+        </view>
+    </view>
+    <view class="user border-bottom p15 fsz-26">
+        <view class="weight">用户昵称：185396545665</view>
+        <view class="mt5">下单时间：2019-10-22 14:41:26</view>
+        <view class="mt5 red">配送距离4.96公里，配送费5元</view>
+    </view>
+    <view class="footer i-flex jcontent-sa py10">
+        <view class="btn">确认抢单</view>
+    </view>
+</view>

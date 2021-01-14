@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "navigationBarBackgroundColor": "#ff5344",
+  "usingComponents": {
+    "i-img": "../../components/img/index",
+    "i-card": "../../components/card/index",
+    "i-modal": "../../components/modal/index"
+  }
+}
